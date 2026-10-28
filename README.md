@@ -1,20 +1,18 @@
-# 72 Hours to Act — XCeed (complete rebuild)
+# 72 Hours to Act — Student BIMA XCeed
 
-This is a new, self-contained slideshow-style website. **Only `index.html` is needed**. No CSS/JS assets, build process, or external libraries.
+This is a self-contained static slideshow game. Upload **index.html** to the root of your GitHub Pages repository. No other files are required.
 
-## GitHub Pages deployment
-1. In `Zahid-AR/XCEED-AMNESTY-CHALLENGE`, open the root `index.html` file.
-2. Click the pencil (Edit) icon. Select all old contents, replace with the contents of the new `index.html`, and commit. Alternatively, upload the new `index.html` to the repository root, replacing the old one.
-3. Wait for GitHub Pages deployment, then hard-refresh with Ctrl+Shift+R.
-4. Old `styles.css` and `app.js` files can remain in the repository but are not used by this new page.
+## Gameplay
 
-## Play
-- 13 full-screen slide-like stages, including situation, rules, roles, marketplace, three crises, three question checkpoints, and handover.
-- Back and Undo controls; Undo rolls back purchases, choices, submitted answers, and navigation.
-- Nine objectives, each with hard/medium/easy questions (27 question variants).
-- After seeing a question, a team can switch resources if they can afford it; questions update accordingly.
-- Crisis outcomes and resource spending use a shared budget; no persistent money tracker or action log.
-- Progress is saved in the browser's localStorage. Restart resets the game after confirmation.
+- 13 slideshow screens with Back and Undo, plus Restart.
+- Six roles. Only the Team Leader operates the device. Only the relevant specialist may answer each trivia question, without help.
+- Start with £10,000. Buy, switch, or sell Medical, Legal, and Advocacy resources. Resource tier sets question difficulty and retains crisis intelligence/perks.
+- Each crisis choice has an upfront cost. Donations and penalties apply as described in the outcome.
+- Each of nine objectives is earned by answering a science, Islamic history, or Islamic deen question correctly.
+- Spend £500 to remove one wrong answer, up to two wrong answers per question. Upgrading resources after viewing the question is allowed before submission.
+- **Refund completed objectives for £1,000 each.** Refunded objectives are permanently forfeited and do not count towards Amnesty's 6/9 threshold.
+- Handover to Amnesty International without a prescribed template.
 
-## Note
-The three crisis decisions are deterministic. Trivia is an initial question set to be reviewed by workshop facilitators before use. The 7-minute first crisis is facilitator-paced rather than automatically timed.
+## Important
+
+This is a fictional educational simulation. Financial amounts, legal facts about Navara, and Amnesty's 6/9 rule are game mechanics, not Amnesty International policies. Browser progress is stored locally on the device. Restart clears progress.
