@@ -1,71 +1,36 @@
-# XCeed Navara Response — GitHub Pages
+# XCeed Navara — Nine-page manual slideshow
 
-A nine-page slideshow-based team workshop for five devices, using the approved Crisis 1 and 2 puzzle screens and Crisis 3 version 2. **No hint controls.**
+This is a static GitHub Pages site. **No Firebase, backend, team code, login or live device synchronisation is used.**
 
-## Publish
+## Deploy
+1. Extract this ZIP.
+2. Create a GitHub repository. Upload `index.html`, `app.js`, and the `puzzles/` folder at the repository root.
+3. In repository Settings → Pages, choose Deploy from a branch → `main` → `/ (root)`.
+4. Open the resulting GitHub Pages URL on five devices.
 
-1. Create a new GitHub repository, for example `xceed-navara`.
-2. Upload **all files and the `puzzles` directory** from this ZIP to the repository root. Do not upload the ZIP itself.
-3. Go to **Settings → Pages → Build and deployment → Deploy from a branch**, select `main` and `/ (root)`, then Save.
-4. Open `https://YOUR-USERNAME.github.io/xceed-navara/`.
+## Run at each table
+- Each participant selects their role on their own device.
+- All five start on Page 1. Page 2 confirms their roles.
+- When the leader says **RED**, everyone presses their own RED Next arrow. There is **no automatic acknowledgement or waiting**.
+- The leader may press the separate **ORANGE Leader preview** button to see the next slide on their own screen. It does not affect anyone else. The orange return button exits preview.
+- On crisis pages (3, 5, 7), each specialist sees only their assigned puzzle, and verbally gives the codeword and evidence to the leader.
+- The leader verifies the three codewords and selects an intervention. Other participants then select the same option on the following outcome page so that the correct outcome is shown locally.
+- The leader tracks spending locally; the Finance & Handover participant records the team discussion independently. Their devices do not exchange records.
+- Progress and role are saved in each device's local browser storage. Back navigation is available if someone advances too soon.
 
-## IMPORTANT: cross-device sync needs Firebase
-
-GitHub Pages only serves static files. It cannot, by itself, keep five phones in sync. The website includes Firebase Realtime Database integration, which requires **one-time configuration**.
-
-1. Create a Firebase project at https://console.firebase.google.com/.
-2. Add a **Web app** and copy its `firebaseConfig` object.
-3. Enable **Authentication → Sign-in method → Anonymous**.
-4. Create **Realtime Database** (not Firestore), choose a region and note its `databaseURL`.
-5. Edit `config.js` to set `window.XCEED_FIREBASE_CONFIG = { ... }`, including `databaseURL`.
-6. Set Realtime Database rules for a short, controlled workshop (example below). Publish the updated `config.js` to GitHub.
-
-Example temporary rules for a supervised pilot:
-
-```json
-{
-  "rules": {
-    "teams": {
-      "$team": {
-        ".read": "auth != null",
-        ".write": "auth != null"
-      }
-    }
-  }
-}
-```
-
-**Security warning:** These simple pilot rules let any anonymously signed-in user with your Firebase config read or modify team data. Use unpredictable team codes, do not store personal information, and tighten rules before a public conference. For production, add server-enforced role permissions and team-code authentication, preferably with Cloud Functions or a custom backend. The client-side role restriction is a usability feature, **not a security boundary**.
-
-## Using the slideshow
-
-- Each person opens the same website and enters the same team code, but selects a distinct role.
-- The leader sees briefing, decisions, and team progress. Each specialist sees **only their assigned puzzle** in each crisis. Finance sees budget and handover.
-- **ORANGE Next** is a leader-only preview. It does not change other devices.
-- The leader clicks **RED Release** to make the next arrow red on every device.
-- Everyone clicks the **RED Next** arrow. When all five roles have acknowledged, the next slide appears on all devices.
-- The leader can use **Force advance** for rehearsals if a participant is absent.
-- Only the leader can select interventions. The team budget begins at £12,000.
-
-## Limitations
-
-- The app has not undergone real-device or live Firebase end-to-end testing. Test with five devices before the event.
-- The original puzzle HTML files are embedded as iframes with role-specific display filters; this preserves their approved mechanics and appearance.
-- Client-side state is not suitable for high-stakes privacy or secure competition. It is a workshop game.
-- Without Firebase, local demo mode can synchronise tabs on one browser origin but **not separate devices**. Do not assume manual mode is networked.
-
-## Nine-page sequence
-
+## Nine slides
 1. Introduction
-2. Select / confirm role
-3. Crisis 1: specialists solve their own puzzle; leader verifies KETONES, FAMILY, TWO NURSES and selects an intervention
+2. Roles
+3. Crisis 1 and puzzles
 4. Crisis 1 outcome
-5. Crisis 2: specialists solve their own puzzle; leader verifies TRIAGE, SCREENING, CAPACITY and selects an intervention
+5. Crisis 2 and puzzles
 6. Crisis 2 outcome
-7. Crisis 3: specialists solve their own puzzle; leader verifies GEOMETRY, PROVENANCE, DEADLINE and selects an intervention
+7. Crisis 3 and puzzles
 8. Crisis 3 outcome
-9. Amnesty International handover (Finance & Handover enters the report)
+9. Amnesty handover
 
-The leader cannot release the red arrow from a crisis page until an intervention is recorded. A leader-only orange preview never advances the other screens. The puzzle HTML files are unchanged.
-
-**Pilot note:** In demo mode, tabs in the same browser can communicate using BroadcastChannel. For independent phones, configure Firebase as above. Cross-device operation and permissions need testing before the event.
+## Important limits
+- This is **manual coordinated clicking**, not technical synchronisation. Each participant must pay attention to the leader's cue.
+- Only the leader's browser has their entered codewords, intervention choices and budget. Specialist devices do not receive that information automatically.
+- Puzzle files are retained from the approved no-hints versions of Crises 1 and 2 and the corrected Crisis 3 version 2.
+- Test the puzzles on the actual tablets/phones before the conference.
