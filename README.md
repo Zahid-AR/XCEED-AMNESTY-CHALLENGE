@@ -1,6 +1,6 @@
 # XCeed Navara Response — GitHub Pages
 
-A slideshow-based team workshop for five devices, using the approved Crisis 1 and 2 puzzle screens and Crisis 3 version 2. **No hint controls.**
+A nine-page slideshow-based team workshop for five devices, using the approved Crisis 1 and 2 puzzle screens and Crisis 3 version 2. **No hint controls.**
 
 ## Publish
 
@@ -53,3 +53,19 @@ Example temporary rules for a supervised pilot:
 - The original puzzle HTML files are embedded as iframes with role-specific display filters; this preserves their approved mechanics and appearance.
 - Client-side state is not suitable for high-stakes privacy or secure competition. It is a workshop game.
 - Without Firebase, local demo mode can synchronise tabs on one browser origin but **not separate devices**. Do not assume manual mode is networked.
+
+## Nine-page sequence
+
+1. Introduction
+2. Select / confirm role
+3. Crisis 1: specialists solve their own puzzle; leader verifies KETONES, FAMILY, TWO NURSES and selects an intervention
+4. Crisis 1 outcome
+5. Crisis 2: specialists solve their own puzzle; leader verifies TRIAGE, SCREENING, CAPACITY and selects an intervention
+6. Crisis 2 outcome
+7. Crisis 3: specialists solve their own puzzle; leader verifies GEOMETRY, PROVENANCE, DEADLINE and selects an intervention
+8. Crisis 3 outcome
+9. Amnesty International handover (Finance & Handover enters the report)
+
+The leader cannot release the red arrow from a crisis page until an intervention is recorded. A leader-only orange preview never advances the other screens. The puzzle HTML files are unchanged.
+
+**Pilot note:** In demo mode, tabs in the same browser can communicate using BroadcastChannel. For independent phones, configure Firebase as above. Cross-device operation and permissions need testing before the event.
