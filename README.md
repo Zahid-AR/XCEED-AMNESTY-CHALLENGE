@@ -34,3 +34,6 @@ This is a static GitHub Pages site. **No Firebase, backend, team code, login or 
 - Only the leader's browser has their entered codewords, intervention choices and budget. Specialist devices do not receive that information automatically.
 - Puzzle files are retained from the approved no-hints versions of Crises 1 and 2 and the corrected Crisis 3 version 2.
 - Test the puzzles on the actual tablets/phones before the conference.
+
+## Story upgrade
+This version adds four original illustrated scene images (stored locally in assets/), full incident briefings, detailed intervention descriptions shown before codeword entry, and distinct scripted consequences for all nine possible decisions. The specialist puzzle HTML files are carried over unchanged from the manual-click version. No Firebase is used. Outcomes are fictional teaching scenarios rather than medical or legal predictions. Upload the entire folder including assets/ to GitHub Pages.
