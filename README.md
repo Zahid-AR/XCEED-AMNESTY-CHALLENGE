@@ -43,3 +43,5 @@ Every refresh starts at role selection with blank codewords, unselected interven
 
 ## Risk without intelligence
 The leader can select any affordable intervention even with zero, one, or two verified codewords. The £500 reveal fine is optional. All three crises remind teams that future emergencies are unknown.
+
+Finance update: Finance specialist receives no automatic calculation. Leader can pay £300 once to reveal the emergency ledger. Overspending on an intervention, codeword reveal or ledger check triggers a terminal fictional bank-exposure/police-capture screen. Refresh resets the session.
