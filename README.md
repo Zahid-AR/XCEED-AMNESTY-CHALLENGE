@@ -40,3 +40,6 @@ This version adds four original illustrated scene images (stored locally in asse
 
 ## Fresh-session behaviour and opening dossier
 Every refresh starts at role selection with blank codewords, unselected interventions, and a new £12,000 budget. No game state is saved to localStorage or sessionStorage. After the role-selection slide, the first Next click opens a full-screen Navara background dossier; the button inside the dossier takes participants directly to Crisis 1. This dossier does not add a tenth numbered slide. Budget balances remain hidden from the leader except when they explicitly reveal the emergency finance tracker; the Finance Specialist has their own private ledger.
+
+## Risk without intelligence
+The leader can select any affordable intervention even with zero, one, or two verified codewords. The £500 reveal fine is optional. All three crises remind teams that future emergencies are unknown.
