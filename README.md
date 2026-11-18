@@ -37,3 +37,6 @@ This is a static GitHub Pages site. **No Firebase, backend, team code, login or 
 
 ## Story upgrade
 This version adds four original illustrated scene images (stored locally in assets/), full incident briefings, detailed intervention descriptions shown before codeword entry, and distinct scripted consequences for all nine possible decisions. The specialist puzzle HTML files are carried over unchanged from the manual-click version. No Firebase is used. Outcomes are fictional teaching scenarios rather than medical or legal predictions. Upload the entire folder including assets/ to GitHub Pages.
+
+## Fresh-session behaviour and opening dossier
+Every refresh starts at role selection with blank codewords, unselected interventions, and a new £12,000 budget. No game state is saved to localStorage or sessionStorage. After the role-selection slide, the first Next click opens a full-screen Navara background dossier; the button inside the dossier takes participants directly to Crisis 1. This dossier does not add a tenth numbered slide. Budget balances remain hidden from the leader except when they explicitly reveal the emergency finance tracker; the Finance Specialist has their own private ledger.
